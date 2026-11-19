@@ -1,6 +1,6 @@
-# Quoridor — terminal edition
+# Quoridor - terminal edition
 
-A complete, playable version of the board game **Quoridor** that runs in your terminal. Race your pawn across a 9×9 board and place walls to slow your opponents down — for 2 or 4 players, with a chess clock, a move counter and full-game replay.
+A complete, playable version of the board game **Quoridor** that runs in your terminal. Race your pawn across a 9×9 board and place walls to slow your opponents down - for 2 or 4 players, with a chess clock, a move counter and full-game replay.
 
 ```
      1   2   3   4   5   6   7   8   9
@@ -32,12 +32,12 @@ Player A's turn (top -> bottom)  Turn 2 | Walls left: 10 | Distance to goal: 8
 ## Features
 
 - **2 or 4 players**, taking turns clockwise.
-- **Chess clock** — every player has a time bank that only runs on their turn. Run out of time and you're out of the game.
+- **Chess clock** - every player has a time bank that only runs on their turn. Run out of time and you're out of the game.
 - **Move counter and end-of-game summary** — turns, steps, walls placed, walls left and time used for each player.
-- **Full-game replay** — every game is recorded; watch it back step by step or on autoplay, and save it to a file to replay later.
-- **The "no trapping" rule** — a wall is refused if it would leave *any* player with no route to their goal edge, found with a breadth-first search. You can never wall someone into a pocket they can't escape (or wall yourself in).
+- **Full-game replay** - every game is recorded; watch it back step by step or on autoplay, and save it to a file to replay later.
+- **The "no trapping" rule** - a wall is refused if it would leave *any* player with no route to their goal edge, found with a breadth-first search. You can never wall someone into a pocket they can't escape (or wall yourself in).
 - **Distance to goal** shown on every turn, so you can see what a wall is really costing your opponent.
-- **Friendly input handling** — typos and illegal moves get a clear message and another try; they never crash the game.
+- **Friendly input handling** - typos and illegal moves get a clear message and another try; they never crash the game.
 - Pure Python standard library: no extra packages to install.
 
 ## Quick start: play in 5 steps
