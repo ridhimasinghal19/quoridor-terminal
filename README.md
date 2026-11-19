@@ -26,6 +26,7 @@ A complete, playable version of the board game **Quoridor** that runs in your te
 Clocks: A 4:56   B 4:52
 Player A's turn (top -> bottom)  Turn 2 | Walls left: 10 | Distance to goal: 8
 ```
+*The double line under row 3 is a wall, placed with `h 3 4`. Horizontal walls are drawn with `═` and vertical walls with `║`.*
 
 ## Features
 
