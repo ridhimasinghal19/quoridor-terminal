@@ -26,6 +26,7 @@ A complete, playable version of the board game **Quoridor** that runs in your te
 Clocks: A 4:56   B 4:52
 Player A's turn (top -> bottom)  Turn 2 | Walls left: 10 | Distance to goal: 8
 ```
+
 *The double line under row 3 is a wall, placed with `h 3 4`. Horizontal walls are drawn with `═` and vertical walls with `║`.*
 
 ## Features
@@ -37,19 +38,73 @@ Player A's turn (top -> bottom)  Turn 2 | Walls left: 10 | Distance to goal: 8
 - **The "no trapping" rule** — a wall is refused if it would leave *any* player with no route to their goal edge, found with a breadth-first search. You can never wall someone into a pocket they can't escape (or wall yourself in).
 - **Distance to goal** shown on every turn, so you can see what a wall is really costing your opponent.
 - **Friendly input handling** — typos and illegal moves get a clear message and another try; they never crash the game.
-- Pure Python standard library: nothing to install.
+- Pure Python standard library: no extra packages to install.
 
-## Quick start
+## Quick start: play in 5 steps
 
-You need **Python 3.9 or newer** and a terminal that can show Unicode box-drawing characters (any modern terminal can).
+No programming experience needed. These steps work on Windows, Mac and Linux.
 
-```bash
-git clone https://github.com/ridhimasinghal19/quoridor-terminal.git
-cd quoridor-terminal
+### Step 1: Make sure Python is installed
+
+You need **Python 3.9 or newer**. To check, open a terminal (see Step 3) and type:
+
+```
+python --version
+```
+
+- If it shows `Python 3.9` or higher, you're ready.
+- If it says Python isn't recognised or found, try `py --version` (Windows) or `python3 --version` (Mac and Linux). Whichever works is the command to use in Step 4.
+- If none of them work, download Python from [python.org/downloads](https://www.python.org/downloads/). **On Windows, tick "Add python.exe to PATH" on the first installer screen**, then close and reopen your terminal.
+
+### Step 2: Download the game
+
+1. At the top of this page, click the green **Code** button.
+2. Click **Download ZIP**.
+3. Find the downloaded file (usually in your Downloads folder) and **extract it**:
+   - **Windows:** right-click the zip and choose **Extract All…**
+   - **Mac:** double-click the zip.
+   - **Linux:** run `unzip quoridor-terminal-main.zip`.
+
+You'll get a folder called `quoridor-terminal-main`. Open it. If you only see one more folder inside, open that too, until you can see `main.py` and `README.md` side by side.
+
+### Step 3: Open a terminal in that folder
+
+- **Windows:** with the folder open in File Explorer, click the address bar at the top, type `cmd` and press Enter. A black window opens, already in the right place.
+- **Mac:** open **Terminal** (press Cmd+Space, type "Terminal", press Enter). Type `cd ` (with a space after it), drag the folder from Finder into the Terminal window, and press Enter.
+- **Linux:** right-click inside the folder and choose **Open in Terminal**.
+
+### Step 4: Start the game
+
+Type this and press Enter:
+
+```
 python main.py
 ```
 
-On some systems the command is `python3`. You'll be asked for the number of players and the time per player (press Enter for 5 minutes, or enter `0` to play without a clock). You can also skip the questions:
+Use `py main.py` or `python3 main.py` instead if that was the command that worked in Step 1. You should see:
+
+```
+How many players? (2 or 4):
+```
+
+### Step 5: Play
+
+1. Type `2` (or `4`) and press Enter.
+2. Press Enter to accept the default 5 minutes per player. Type `0` for no clock, or any number of minutes.
+3. The board appears. On your turn, type a number and press Enter:
+   - `1` up, `2` down, `3` left, `4` right
+   - `5` to place a wall (for example `h 3 4`, explained below)
+   - `q` to quit
+4. Players take turns until someone reaches the opposite edge. A summary of the game appears, and you can save it and watch the replay.
+
+> **Prefer git?**
+> ```bash
+> git clone https://github.com/ridhimasinghal19/quoridor-terminal.git
+> cd quoridor-terminal
+> python main.py
+> ```
+
+You can also skip the questions with command-line options:
 
 ```bash
 python main.py --players 4 --minutes 10
@@ -153,11 +208,13 @@ The rules live in `board.py` and know nothing about the terminal, so the engine 
 
 ## Running the tests
 
+In the same folder as `main.py`, run:
+
 ```bash
 python -m unittest
 ```
 
-or, if you have pytest installed, `pytest`.
+You should see `Ran 62 tests` followed by `OK`. If you have pytest installed, `pytest` works too.
 
 ## Credits
 
