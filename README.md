@@ -43,7 +43,7 @@ Player A's turn (top -> bottom)  Turn 2 | Walls left: 10 | Distance to goal: 8
 You need **Python 3.9 or newer** and a terminal that can show Unicode box-drawing characters (any modern terminal can).
 
 ```bash
-git clone <this repository's URL>
+git clone https://github.com/ridhimasinghal19/quoridor-terminal.git
 cd quoridor-terminal
 python main.py
 ```
