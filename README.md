@@ -1,6 +1,6 @@
 # Quoridor - terminal edition
 
-A complete, playable version of the board game **Quoridor** that runs in your terminal. Race your pawn across a 9 x 9 board and place walls to slow your opponents down - for 2 or 4 players, with a chess clock, a move counter and full-game replay.
+A complete, playable version of the board game **Quoridor** that runs in your terminal. Race your pawn across a 9x9 board and place walls to slow your opponents down - for 2 or 4 players, with a chess clock, a move counter and full-game replay.
 
 ```
      1   2   3   4   5   6   7   8   9
