@@ -33,7 +33,7 @@ Player A's turn (top -> bottom)  Turn 2 | Walls left: 10 | Distance to goal: 8
 
 - **2 or 4 players**, taking turns clockwise.
 - **Chess clock** - every player has a time bank that only runs on their turn. Run out of time and you're out of the game.
-- **Move counter and end-of-game summary** — turns, steps, walls placed, walls left and time used for each player.
+- **Move counter and end-of-game summary** - turns, steps, walls placed, walls left and time used for each player.
 - **Full-game replay** - every game is recorded; watch it back step by step or on autoplay, and save it to a file to replay later.
 - **The "no trapping" rule** - a wall is refused if it would leave *any* player with no route to their goal edge, found with a breadth-first search. You can never wall someone into a pocket they can't escape (or wall yourself in).
 - **Distance to goal** shown on every turn, so you can see what a wall is really costing your opponent.
@@ -134,7 +134,7 @@ You can't move off the board, through a wall, or onto another pawn. Each player 
 
 ### Placing walls
 
-A wall is two cells long. Name it with its orientation and the row and column (1–8) of its **anchor cell**:
+A wall is two cells long. Name it with its orientation and the row and column (1-8) of its **anchor cell**:
 
 ```
 h 3 5   a horizontal wall directly below cell (3, 5) and the cell to its right
@@ -145,7 +145,7 @@ Walls can't overlap or cross each other, but they can meet end to end, at a corn
 
 ### The clock
 
-Each player has their own time bank, which counts down only during their turn. The clock is checked whenever you press Enter, so a turn that runs over the limit is caught as soon as you submit it — the late move doesn't count, and you leave the game. In a 2-player game your opponent wins; in a 4-player game play continues without you.
+Each player has their own time bank, which counts down only during their turn. The clock is checked whenever you press Enter, so a turn that runs over the limit is caught as soon as you submit it - the late move doesn't count, and you leave the game. In a 2-player game your opponent wins; in a 4-player game play continues without you.
 
 ### Replays
 
